@@ -8,11 +8,12 @@ SENHA = 'Exp2025$'
 def buscar_livros(Server, Database, Usuario, Senha, banco):
     # Conexão para criar o banco de dados 
     dados_conexao = (
-    "Driver={SQL Server};"
+    "DRIVER=ODBC Driver 17 for SQL Server;"   # "Driver={SQL Server};"
     "Server="+Server+";"
     "Database="+Database+";"
     "UID="+Usuario+";"
     "PWD="+Senha+";"
+    "Encrypt=yes;TrustServerCertificate=yes"
     )
 
     conexao = pyodbc.connect(dados_conexao)
@@ -30,11 +31,12 @@ def buscar_livros(Server, Database, Usuario, Senha, banco):
 def alterar_status(Server, Database, Usuario, Senha, LOGIN, SITUACAO, ID_LIVRO):
     # Conexão para criar o banco de dados 
     dados_conexao = (
-    "Driver={SQL Server};"
+    "DRIVER=ODBC Driver 17 for SQL Server;"   # "Driver={SQL Server};"
     "Server="+Server+";"
     "Database="+Database+";"
     "UID="+Usuario+";"
     "PWD="+Senha+";"
+    "Encrypt=yes;TrustServerCertificate=yes"
     )
 
     conexao = pyodbc.connect(dados_conexao)
@@ -77,11 +79,12 @@ def alterar_status(Server, Database, Usuario, Senha, LOGIN, SITUACAO, ID_LIVRO):
 def inserir_livros(Server, Database, Usuario, Senha, LOGIN, TITULO, AUTOR):
     # Conexão para criar o banco de dados 
     dados_conexao = (
-    "Driver={SQL Server};"
+    "DRIVER=ODBC Driver 17 for SQL Server;"   # "Driver={SQL Server};"
     "Server="+Server+";"
     "Database="+Database+";"
     "UID="+Usuario+";"
     "PWD="+Senha+";"
+    "Encrypt=yes;TrustServerCertificate=yes"
     )
 
     conexao = pyodbc.connect(dados_conexao)
